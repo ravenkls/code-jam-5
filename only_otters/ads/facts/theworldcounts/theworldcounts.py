@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
     hxq = HierarchicalXPathQuery.from_yml(__folder__ / 'theworldcounts.yml')
 
-    pulled_resources = [ *hxq() ]
+    pulled_resources = list(*hxq())
 
     print(json.dumps(
         pulled_resources,
